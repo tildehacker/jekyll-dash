@@ -60,4 +60,9 @@ function modeSwitcher() {
 	    activateDarkTheme();
 	}
 }
+
+var toggles = document.getElementsByClassName('toggleWrapper');
+Array.from(toggles).forEach((element) => {
+    element.style.display = 'inline-block';
+});
 </script>
