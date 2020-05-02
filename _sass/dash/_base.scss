@@ -9,6 +9,7 @@ body {
   display: flex;
   min-height: 100vh;
   flex-direction: column;
+  -webkit-tap-highlight-color: transparent;
 
   @include themed() {
       background-color: t('background-color-alt');
