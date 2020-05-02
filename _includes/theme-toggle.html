@@ -22,7 +22,6 @@ if (theme === "light") {
 } else {
     document.documentElement.setAttribute('data-theme', 'dark');
 }
-const userPrefers = getComputedStyle(document.documentElement).getPropertyValue('content');
 
 function activateDarkTheme() {
     document.getElementById('theme-toggle').checked = true;
@@ -42,12 +41,8 @@ function activateLightTheme() {
 	window.localStorage.setItem('theme', 'light');
 }
 
-if (theme === "dark") {
-    activateDarkTheme();
-} else if (theme === "light") {
+if (theme === "light") {
     activateLightTheme();
-} else if  (userPrefers === "light") {
-    activateDarkTheme();
 } else {
     activateDarkTheme();
 }
