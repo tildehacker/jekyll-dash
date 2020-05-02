@@ -17,16 +17,10 @@
 <script type="text/javascript">
 const theme = localStorage.getItem('theme');
 
-if (theme === "light") {
-    document.documentElement.setAttribute('data-theme', 'light');
-} else {
-    document.documentElement.setAttribute('data-theme', 'dark');
-}
 const userPrefers = getComputedStyle(document.documentElement).getPropertyValue('content');
 
 function activateDarkTheme() {
     document.getElementById('theme-toggle').checked = true;
-    document.documentElement.setAttribute('data-theme', 'dark');
     document.documentElement.classList.add('theme--dark');
     document.documentElement.classList.remove('theme--light');
 	document.getElementById("theme-toggle").className = 'light';
@@ -35,7 +29,6 @@ function activateDarkTheme() {
 
 function activateLightTheme() {
     document.getElementById('theme-toggle').checked = false;
-    document.documentElement.setAttribute('data-theme', 'light');
     document.documentElement.classList.add('theme--light');
     document.documentElement.classList.remove('theme--dark');
 	document.getElementById("theme-toggle").className = 'dark';
@@ -53,7 +46,7 @@ if (theme === "dark") {
 }
 
 function modeSwitcher() {
-	let currentMode = document.documentElement.getAttribute('data-theme');
+	let currentMode = localStorage.getItem('theme');
 	if (currentMode === "dark") {
 	    activateLightTheme();
 	} else {
