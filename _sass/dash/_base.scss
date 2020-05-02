@@ -116,7 +116,7 @@ a {
     @include themed() {
        color: t('foreground-color');
     }
-    text-decoration: underline;
+    text-decoration: none;
   }
 
   .social-media-list &:hover {
