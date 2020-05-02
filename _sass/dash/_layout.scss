@@ -332,17 +332,17 @@ ul.related-posts {
       display: inline-block;
       padding-top: 0.5em;
       padding-bottom: 0.5em;
+
+      &:before {
+        content: $icon-flask;
+        @include font-awesome-icon;
+        color: $color-green;
+        margin-right: 0.5em;
+      }
     }
     h3 {
       display: inline-block;
       margin: 0;
-    }
-
-    &:before {
-      content: $icon-flask;
-      @include font-awesome-icon;
-      color: $color-green;
-      margin-right: 0.5em;
     }
   }
 }
