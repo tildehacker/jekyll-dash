@@ -36,6 +36,7 @@ dash:
       color: purple
 
   show_author: true
+  show_favicon: true
 
 # Build settings
 theme: jekyll-dash
