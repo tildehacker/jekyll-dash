@@ -15,7 +15,14 @@
     </label>
 </div>
 <script type="text/javascript">
-const theme = localStorage.getItem('theme');
+let theme = localStorage.getItem('theme');
+if (!theme) {
+    if (document.documentElement.classList.contains('theme--light')) {
+        theme = 'light';
+    } else {
+        theme = 'dark';
+    }
+}
 
 function activateDarkTheme() {
     document.getElementById('theme-toggle').checked = true;

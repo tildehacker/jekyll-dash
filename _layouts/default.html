@@ -1,5 +1,12 @@
+{% if site.dash.default_color_scheme == "light" %}
+  {% assign color_scheme = "theme--light" %}
+{% else %}
+  {% assign color_scheme = "theme--dark" %}
+{% endif %}
+
 <!DOCTYPE html>
-<html lang="{{ page.lang | default: site.lang | default: "en" }}" class="theme--dark">
+<html lang="{{ page.lang | default: site.lang | default: "en" }}"
+      class="{{ color_scheme }}">
 
   {%- include head.html -%}
 
