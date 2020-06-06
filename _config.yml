@@ -37,6 +37,7 @@ dash:
 
   show_author: true
   show_favicon: true
+  default_color_scheme: black
 
 # Build settings
 theme: jekyll-dash
