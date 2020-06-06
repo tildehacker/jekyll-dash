@@ -5,7 +5,8 @@
 {% endif %}
 
 <!DOCTYPE html>
-<html lang="{{ page.lang | default: site.lang | default: "en" }}" class="theme--dark">
+<html lang="{{ page.lang | default: site.lang | default: "en" }}"
+      class="{{ color_scheme }}">
 
   {%- include head.html -%}
 
