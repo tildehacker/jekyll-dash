@@ -5,6 +5,7 @@ A dark and light theme for Jekyll, inspired by Dash UI for Atom. 🌒☀
 
 [![Build Status](https://img.shields.io/travis/bitbrain/braingdx/master.svg?logo=travis&style=flat-square)](https://travis-ci.org/bitbrain/jekyll-dash)
 [![license](https://img.shields.io/github/license/bitbrain/jekyll-dash.svg?style=flat-square)](LICENSE.MD)
+[![Gem](https://img.shields.io/gem/v/jekyll-dash.svg?style=flat)](http://rubygems.org/gems/jekyll-dash "View this project in Rubygems")
 ---
 This theme for [Jekyll](https://jekyllrb.com/) has been inspired by [dash-ui](https://atom.io/themes/dash-ui), a dark theme for [Atom](https://atom.io).
 
@@ -14,8 +15,16 @@ This theme for [Jekyll](https://jekyllrb.com/) has been inspired by [dash-ui](ht
 
 Add this line to your Jekyll site's `Gemfile`:
 
+For **Jekyll 3**:
 ```ruby
-gem "jekyll-dash"
+gem 'jekyll-dash', '~> 1.0.0'
+```
+
+> Keep in mind: Github pages generation only supports Jekyll 3.8 right now.
+
+For **Jekyll 4**:
+```ruby
+gem 'jekyll-dash', '~> 2.0.0'
 ```
 
 And add this line to your Jekyll site's `_config.yml`:
@@ -30,7 +39,7 @@ And then execute:
 
 Or install it yourself as:
 
-    $ gem install jekyll-dash
+    $ gem install jekyll-dash -v version
 
 ## Configuration
 
@@ -112,6 +121,12 @@ gem "liquid-md5"
 > I am using this theme but I don't see any tags?
 
 **Solution**: as described above you have to add the tagging plugin. Additionally, tags do not work natively by Github Pages. You have to build your site on an external CI and push the `_site` artifacts to a hosting repository.
+
+> I am getting an error that Bundler could not find compatible versions for gem
+
+**Solution**
+
+Make sure you are using a version of this theme that is compatible with Jekyll. Version 1.x is only compatible with Jekyll 3.x while Version 2.x is only compatible with Jekyll 4.x.
 
 ## Contributing
 
