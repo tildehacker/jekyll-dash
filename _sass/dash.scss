@@ -34,6 +34,12 @@ $spacing-unit: 30px !default;
 
 // Import partials.
 @import
+  "fa/fontawesome",
+  "fa/solid",
+  "fa/regular",
+  "fa/brands",
+  "dash/fonts",
+  "dash/icons",
   "dash/colors",
   "dash/themes",
   "dash/mixins",
