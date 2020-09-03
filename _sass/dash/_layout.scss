@@ -154,6 +154,15 @@
         padding-left: 3em;
     }
 
+    &:before {
+      content: $icon-quote-right;
+      @include font-awesome-icon;
+      margin-right: -2em;
+      float: left;
+
+      font-size: 2em;
+    }
+
     li {
       @include themed() {
          color: t('quote-secondary');
