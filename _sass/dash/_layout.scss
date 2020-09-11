@@ -14,6 +14,12 @@
     color: $color-blue;
     font-size: $base-font-size;
     margin-left: 0.1em;
+
+    &:before {
+      content: $icon-chevron-right;
+      @include font-awesome-icon;
+      margin-right: 0.2em;
+    }
   }
 }
 
@@ -92,6 +98,13 @@
     animation: blinker 1s none infinite;
     font-size: 16px;
   }
+
+  &:before {
+    content: $icon-chevron-right;
+    @include font-awesome-icon;
+    margin-right: 0.5em;
+    color: $color-blue;
+  }
 }
 
 .post {
@@ -131,6 +144,12 @@
     }
     list-style: none;
     margin-left: 0;
+
+    &:before {
+      content: $icon-check;
+      @include font-awesome-icon;
+      margin-right: 0.5em;
+    }
   }
 
   ul, ol {
@@ -166,6 +185,9 @@
     li {
       @include themed() {
          color: t('quote-secondary');
+      }
+      &:before {
+        content: $icon-minus;
       }
     }
   }
@@ -210,6 +232,12 @@
     @include themed() {
        background-color: lighten(t('background-color'), 5%);
     }
+  }
+
+  &:before {
+    content: $icon-tag;
+    @include font-awesome-icon;
+    margin-right: 0.5em;
   }
 }
 
@@ -304,6 +332,13 @@ ul.related-posts {
       display: inline-block;
       padding-top: 0.5em;
       padding-bottom: 0.5em;
+
+      &:before {
+        content: $icon-flask;
+        @include font-awesome-icon;
+        color: $color-green;
+        margin-right: 0.5em;
+      }
     }
     h3 {
       display: inline-block;
@@ -318,12 +353,20 @@ ul.related-posts {
     float: right;
     display: inline-block;
     &.dark {
+        &:before {
+            content: $icon-flask;
+            @include font-awesome-icon;
+        }
          @include themed() {
             color: t('foreground-color');
          }
     }
 
     &.light {
+        &:before {
+            content: $icon-flask;
+            @include font-awesome-icon;
+        }
         color: $color-yellow;
     }
 }
