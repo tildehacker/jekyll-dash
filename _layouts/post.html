@@ -61,6 +61,8 @@ layout: default
     }
   }
 
-  document.getElementById('animated-post-description').style.display = 'initial';
-  typeWriter();
+  window.addEventListener('DOMContentLoaded', function () {
+    document.getElementById('animated-post-description').style.display = 'initial';
+    typeWriter();
+  });
 </script>
