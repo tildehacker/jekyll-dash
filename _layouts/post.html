@@ -15,10 +15,14 @@ layout: default
   {% endif %}
   <div class="post-date">Published on {{ page.date | date_to_string }}</div>
   {% if page.description != null %}
+  {% if site.dash.post_description_animation != false %}
   <noscript>
     <div class="post-description">{{ page.description }}</div>
   </noscript>
   <div id="animated-post-description" class="post-description" style="display: none;"></div>
+  {% else %}
+  <div class="post-description">{{ page.description }}</div>
+  {% endif %}
   {% endif %}
   {% include anchor_headings.html html=content anchorBody="#" %}
 </div>
