@@ -39,6 +39,8 @@ dash:
   show_favicon: true
   default_color_scheme: black
 
+  animation_speed: 50
+
 # Build settings
 theme: jekyll-dash
 
