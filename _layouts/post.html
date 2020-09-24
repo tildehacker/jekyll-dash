@@ -52,6 +52,7 @@ layout: default
 {% endif %}
 {% include tagcloud.html %}
 
+{% unless site.dash.post_description_animation == false %}
 {% assign animation_speed = site.dash.animation_speed | default: 50 %}
 <script>
   let i = 0;
@@ -71,3 +72,4 @@ layout: default
     typeWriter();
   });
 </script>
+{% endunless %}
