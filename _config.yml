@@ -43,6 +43,7 @@ dash:
   default_color_scheme: black
 
   animation_speed: 50
+  post_description_animation: true
 
 # Build settings
 theme: jekyll-dash
